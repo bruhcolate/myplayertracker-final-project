@@ -1,0 +1,19 @@
+<h2>{{username}}'s Page</h2>
+
+<div class="buttons">
+    <div class="add">
+        <a href="/add">Add Player</a>
+    </div>
+    <div class="add">
+        <a href="/remove">Remove Player</a>       
+    </div>
+</div>
+
+<div class="lists">
+    <ul class="list">
+        <h2>My Players</h2>
+        {{#each players}}
+        <li><a href="/tracker/{{../userSlug}}/players/{{slug}}">{{this.name}}</a></li>
+        {{/each}}
+    </ul>
+</div>

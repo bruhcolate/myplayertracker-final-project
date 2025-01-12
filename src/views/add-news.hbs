@@ -1,0 +1,20 @@
+<form method="POST" action="/tracker/{{userSlug}}/players/{{playerSlug}}/add-news">
+    <h2>Add some news</h2>
+    <div class="news-info">
+        <label for="bio">Title</label>
+        <input type="text" id="title" name="title" value="">
+    </div>
+    <div class="news-info">
+        <label for="bio">Link</label>
+        <input type="text" id="link" name="link" value="">
+    </div>
+    <div class="news-info">
+        <label for="bio">Description</label>
+        <input type="text" id="desc" name="desc" value="" style="height: 40px">
+    </div>
+    <div class="news-info">
+        <label for="bio">Date</label>
+        <input type="text" id="date" name="date" value="">
+    </div>
+    <input type="submit" value="Add">
+</form>

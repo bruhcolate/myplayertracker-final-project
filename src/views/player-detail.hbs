@@ -1,0 +1,22 @@
+<div class="player-container">
+    <div class="player-info">
+        <h2>{{player.name}}</h2>
+        <div>Sport: {{player.sport}}</div>
+        <div>Age: {{player.age}}</div>
+        <div>Description: {{player.bio}}</div>
+    </div>
+</div>
+
+<div class="news">
+    <h2 class="news-title">News</h2>
+    <a href="/tracker/{{userSlug}}/players/{{playerSlug}}/add-news">Add</a>
+    <ul class="news-list">
+        {{#each news}}
+        <li style="padding: 10px">
+            <div><a href="{{link}}">{{title}}</a></div>
+            <div>{{description}}</div>
+            <div> Posted on: {{date}}</div>
+        </li>
+        {{/each}}
+    </ul>
+</div>

@@ -1,0 +1,22 @@
+<h2>Login</h2>
+
+<form method="POST" action="login">
+    <div class="user-login">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="">
+    </div>
+    <div class="pass-login">
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" value="">
+    </div>
+    {{#if message}}
+    <div class="error">{{message}}</div>
+    {{/if}}
+    {{#if unverified}}
+    <div class="error">{{unverified}}</div>
+    {{/if}}
+    <input type="submit" value="Login">
+</form>
+<div class="login-register">
+    <h3>Don't have an account? Register <a href="/register">here!</a></h3>
+</div>

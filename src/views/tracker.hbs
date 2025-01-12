@@ -1,0 +1,18 @@
+
+<div class="buttons">
+    <div class="add">
+        <a href="/add">Add Player</a>
+    </div>
+    <div class="add">
+        <a href="/remove">Remove Player</a>       
+    </div>
+</div>
+
+<div class="lists">
+    <ul class="list">
+        <h2>My Players</h2>
+        {{#each players}}
+        <li><a href="/tracker/{{slug}}">{{this.name}}</a></li>
+        {{/each}}
+    </ul>
+</div>

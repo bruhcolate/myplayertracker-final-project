@@ -1,0 +1,36 @@
+<h2>Remove Player</h2>
+
+<ul class="list">
+    {{#each players}}
+        <li>{{this.name}}
+        <button type="button" class="open-modal" data-id="{{this._id}}">X</button>
+        </li>
+    {{/each}}
+</ul>
+
+<form method="POST" action="/remove">
+    <div id="modal-remove" class="remove-modal">
+        <div class="modal-content">
+            <div>Are you sure you want to remove this player?</div>
+            <input type="hidden" name="_id" id="player-id">
+            <button type="submit">Yes</button>
+            <button type="button" id="cancel-button">No</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    // open
+    document.querySelectorAll('.open-modal').forEach(button => {
+        button.addEventListener('click', function () {
+            const playerId = this.dataset.id;
+            document.getElementById('player-id').value = playerId;
+            document.getElementById('modal-remove').style.display = 'block';
+        });
+    });
+
+    // cancel
+    document.getElementById('cancel-button').addEventListener('click', function () {
+        document.getElementById('modal-remove').style.display = 'none';
+    });
+</script>

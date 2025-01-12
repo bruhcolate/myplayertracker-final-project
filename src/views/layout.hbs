@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPlayerTracker</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<header style="display: flex; align-items: center; justify-content: space-between; : 0 10px;">
+    <h1 style="font-size: 35px;">
+        <a href="/">MyPlayerTracker</a>
+    </h1>
+    <div style="display: flex; gap: 30px;">
+        {{#if user}}
+        Logged in as {{user.username}}
+        <a href="/logout">Logout</a>
+        {{else}}
+            <h3>
+                <a href="/login" style="margin-right: 0px">Login</a>
+            </h3>
+            <h3>
+                <a href="/register" style="margin-right: 50px">Register</a>
+            </h3>
+        {{/if}}
+    </div>
+</header>
+<hr style="height: 2px; background-color: black;">
+
+<body>
+    {{{body}}}
+</body>
+</html>
